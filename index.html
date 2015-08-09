@@ -122,6 +122,139 @@
           
           
             
+              <a class="post-title-link" href="/2015/08/09/angularjs/">
+                angularjs简易入门使用
+              </a>
+            
+          
+        </h1>
+      
+
+      <div class="post-meta">
+        <span class="post-time">
+          发表于 2015-08-09
+        </span>
+
+        
+          <span class="post-category">
+            &nbsp; | &nbsp; 分类于
+            
+              <a href="/categories/产品经理/">产品经理</a>
+
+              
+              
+
+            
+          </span>
+        
+
+        
+          
+        
+      </div>
+    </div>
+
+    <div class="post-body">
+
+      
+      
+
+      
+        
+          <h2 id="angularjs">angularjs</h2><ul>
+<li>www.kittencup.com 资源</li>
+</ul>
+<h3 id="过滤器">过滤器</h3><ul>
+<li>limitTo : 5       //输出前五位</li>
+<li>limitTo : -5    //输出后五位</li>
+</ul>
+<hr>
+<ul>
+<li>filter ：“需要过滤的value的字段”</li>
+<li>filter : {key :’value字段’}</li>
+</ul>
+<hr>
+<ul>
+<li>orderBy : ‘字段排序’<ul>
+<li>asc 正序</li>
+<li>desc 反序 //加负号</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h2 id="*_json_将对象转成json">  * json 将对象转成json</h2><ul>
+<li><p>自定义filter</p>
+<h3 id="列表查询（18）">列表查询（18）</h3><h3 id="列表排序（19）">列表排序（19）</h3><ul>
+<li>ng-class=”{dropup:order === ‘’}”</li>
+<li>ng-click<h3 id="自定义过滤器">自定义过滤器</h3><ul>
+<li>filterProvider.register(‘filerAge’,function(){<br>return function(obj){<br>  var newObj =[];<br>  angular.forEach(obj.function(o)){<pre><code><span class="keyword">if</span><span class="params">(o.age&gt;<span class="number">20</span>)</span>{
+    newObj.push<span class="params">(o)</span>;
+}
+</code></pre>  }<br>}<br>});</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li>.filter(‘filterCity’,function(){<br>  reutrn function(obj){<pre><code>var newObj =[];
+angular.forEach<span class="params">(obj.function<span class="params">(o)</span>)</span>{
+    <span class="keyword">if</span><span class="params">(o.age&gt;<span class="number">20</span>)</span>{
+        newObj.push<span class="params">(o)</span>;
+    }
+}
+</code></pre>  }<br>});</li>
+</ul>
+</li>
+</ul>
+<h3 id="控制器">控制器</h3><h2 id="-正确使用方法">-正确使用方法</h2><pre><code><span class="bullet">* </span>常用办法放到service中
+<span class="bullet">* </span>controller 仅仅包含单个视图所需要的业务逻辑
+<span class="bullet">* </span>不要进行dom操作
+<span class="bullet">* </span>输入格式化，用angular form controls
+<span class="bullet">* </span>输出格式化，用angular filters
+<span class="bullet">* </span>执行共享代码，用service
+<span class="bullet">* </span>实例化或者管理其他组件的生命周期
+</code></pre><p>-隐式的依赖注入<br>.controller(‘firstController’,function($scope){</p>
+<p>})</p>
+<p>-显式的依赖注入<br>.controller(‘secondController’,[‘$scope’,function(a){</p>
+<p>}])</p>
+<p>$inject</p>
+
+        
+      
+    </div>
+
+    <div class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/angularjs/"> #angularjs </a>
+          
+            <a href="/tags/前端框架/"> #前端框架 </a>
+          
+        </div>
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </div>
+  </div>
+
+
+    
+      
+
+  <div class="post post-type-normal ">
+    <div class="post-header">
+
+      
+      
+        <h1 class="post-title">
+          
+          
+            
               <a class="post-title-link" href="/2015/06/13/personal-management/">
                 个人管理的实践篇
               </a>
@@ -537,7 +670,7 @@
         <div class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">5</span>
+              <span class="site-state-item-count">6</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -551,7 +684,7 @@
 
           <div class="site-state-item site-state-tags">
             <a href="/tags">
-              <span class="site-state-item-count">7</span>
+              <span class="site-state-item-count">9</span>
               <span class="site-state-item-name">标签</span>
               </a>
           </div>

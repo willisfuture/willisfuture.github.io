@@ -20,7 +20,7 @@
 
 
 
-  <meta name="keywords" content="hadoop," />
+  <meta name="keywords" content="angularjs,前端框架," />
 
 
 
@@ -31,7 +31,7 @@
 
 
 
-  <title> hadoop相关知识体系及部署hadoop运行环境 // Willisfuture </title>
+  <title> angularjs简易入门使用 // Willisfuture </title>
 </head>
 
 <body>
@@ -120,7 +120,7 @@
           
           
             
-              hadoop相关知识体系及部署hadoop运行环境
+              angularjs简易入门使用
             
           
         </h1>
@@ -128,14 +128,14 @@
 
       <div class="post-meta">
         <span class="post-time">
-          发表于 2015-06-12
+          发表于 2015-08-09
         </span>
 
         
           <span class="post-category">
             &nbsp; | &nbsp; 分类于
             
-              <a href="/categories/大数据/">大数据</a>
+              <a href="/categories/产品经理/">产品经理</a>
 
               
               
@@ -156,51 +156,62 @@
       
 
       
-        <p>本文将详细讲述hadoop2.X的框架结构，并成功部署hadoop运行环境，其中涉及linux相关安装与配置的知识，并提供部署难点的解答、工具下载等相关tip。</p>
-<p>以下为本文目录结构：</p>
-<ul>
-<li>hadoop相关知识体系</li>
-<li>部署hadoop运行环境<ul>
-<li>工具介绍</li>
-<li>部署hadoop流程介绍<ul>
-<li>linux基础介绍</li>
+        <h2 id="angularjs">angularjs</h2><ul>
+<li>www.kittencup.com 资源</li>
 </ul>
-</li>
+<h3 id="过滤器">过滤器</h3><ul>
+<li>limitTo : 5       //输出前五位</li>
+<li>limitTo : -5    //输出后五位</li>
 </ul>
-</li>
-</ul>
-<a id="more"></a>
 <hr>
-<h2 id="hadoop相关知识体系">hadoop相关知识体系</h2><hr>
-<h3 id="hadoop的版本变迁">hadoop的版本变迁</h3><hr>
-<h3 id="hadoop的框架结构">hadoop的框架结构</h3><hr>
-<h3 id="hadoop的生态圈">hadoop的生态圈</h3><hr>
-<h3 id="hadoop的商业版本">hadoop的商业版本</h3><hr>
-<p><img src="http://github.global.ssl.fastly.net/images/modules/logos_page/Octocat.png" alt="相关知识点"></p>
-<h2 id="部署hadoop运行环境">部署hadoop运行环境</h2><hr>
-<h3 id="工具及系统介绍">工具及系统介绍</h3><hr>
-<h4 id="Virtualbox">Virtualbox</h4><hr>
 <ul>
-<li>百度云链接地址<a href="http://pan.baidu.com/s/1hqzpxRm" target="_blank" rel="external">virtualbox</a></li>
+<li>filter ：“需要过滤的value的字段”</li>
+<li>filter : {key :’value字段’}</li>
 </ul>
-<h4 id="Centos">Centos</h4><hr>
-<h4 id="WinSCP">WinSCP</h4><hr>
-<h4 id="Putty">Putty</h4><hr>
-<h3 id="部署hadoop流程介绍">部署hadoop流程介绍</h3><hr>
-<h4 id="安装virtualbox虚拟机">安装virtualbox虚拟机</h4><hr>
-<blockquote>
-<p>tip:记得将virtualbox安装在英文目录下，这样打开软件就可以自动汉化</p>
-</blockquote>
-<h4 id="安装centos系统">安装centos系统</h4><hr>
-<h4 id="安装jdk">安装jdk</h4><hr>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String args[])</span></span><br><span class="line"></span>&#123;</span><br><span class="line">	system.out.pringln(<span class="string">"hello.world"</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h4 id="复制虚拟机，并实现ssh无密码登陆">复制虚拟机，并实现ssh无密码登陆</h4><hr>
-<h2 id="参考文献">参考文献</h2><hr>
-<ol>
-<li><a href="http://www.cnblogs.com/vovlie/archive/2012/09/01/2666807.html" target="_blank" rel="external">详细完整分布模式安装hadoop VirtualBox 3虚拟机</a></li>
-<li><a href="http://chenlb.iteye.com/blog/211809" target="_blank" rel="external">ssh 免密码登录</a></li>
-</ol>
-<!--图片链接-->
+<hr>
+<ul>
+<li>orderBy : ‘字段排序’<ul>
+<li>asc 正序</li>
+<li>desc 反序 //加负号</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h2 id="*_json_将对象转成json">  * json 将对象转成json</h2><ul>
+<li><p>自定义filter</p>
+<h3 id="列表查询（18）">列表查询（18）</h3><h3 id="列表排序（19）">列表排序（19）</h3><ul>
+<li>ng-class=”{dropup:order === ‘’}”</li>
+<li>ng-click<h3 id="自定义过滤器">自定义过滤器</h3><ul>
+<li>filterProvider.register(‘filerAge’,function(){<br>return function(obj){<br>  var newObj =[];<br>  angular.forEach(obj.function(o)){<pre><code><span class="keyword">if</span><span class="params">(o.age&gt;<span class="number">20</span>)</span>{
+    newObj.push<span class="params">(o)</span>;
+}
+</code></pre>  }<br>}<br>});</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li>.filter(‘filterCity’,function(){<br>  reutrn function(obj){<pre><code>var newObj =[];
+angular.forEach<span class="params">(obj.function<span class="params">(o)</span>)</span>{
+    <span class="keyword">if</span><span class="params">(o.age&gt;<span class="number">20</span>)</span>{
+        newObj.push<span class="params">(o)</span>;
+    }
+}
+</code></pre>  }<br>});</li>
+</ul>
+</li>
+</ul>
+<h3 id="控制器">控制器</h3><h2 id="-正确使用方法">-正确使用方法</h2><pre><code><span class="bullet">* </span>常用办法放到service中
+<span class="bullet">* </span>controller 仅仅包含单个视图所需要的业务逻辑
+<span class="bullet">* </span>不要进行dom操作
+<span class="bullet">* </span>输入格式化，用angular form controls
+<span class="bullet">* </span>输出格式化，用angular filters
+<span class="bullet">* </span>执行共享代码，用service
+<span class="bullet">* </span>实例化或者管理其他组件的生命周期
+</code></pre><p>-隐式的依赖注入<br>.controller(‘firstController’,function($scope){</p>
+<p>})</p>
+<p>-显式的依赖注入<br>.controller(‘secondController’,[‘$scope’,function(a){</p>
+<p>}])</p>
+<p>$inject</p>
 
       
     </div>
@@ -209,7 +220,9 @@
       
         <div class="post-tags">
           
-            <a href="/tags/hadoop/"> #hadoop </a>
+            <a href="/tags/angularjs/"> #angularjs </a>
+          
+            <a href="/tags/前端框架/"> #前端框架 </a>
           
         </div>
       
@@ -218,13 +231,11 @@
         <div class="post-nav">
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2015/06/13/axure/">原型设计工具axure</a>
-            
           </div>
 
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2015/06/08/PM and Architect/">产品经理与软件架构师项目过程的交集</a>
+              <a href="/2015/06/13/personal-management/">个人管理的实践篇</a>
             
           </div>
         </div>
@@ -329,7 +340,7 @@
           <div class="post-toc">
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#hadoop相关知识体系"><span class="nav-number">1.</span> <span class="nav-text">hadoop相关知识体系</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#hadoop的版本变迁"><span class="nav-number">1.1.</span> <span class="nav-text">hadoop的版本变迁</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#hadoop的框架结构"><span class="nav-number">1.2.</span> <span class="nav-text">hadoop的框架结构</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#hadoop的生态圈"><span class="nav-number">1.3.</span> <span class="nav-text">hadoop的生态圈</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#hadoop的商业版本"><span class="nav-number">1.4.</span> <span class="nav-text">hadoop的商业版本</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#部署hadoop运行环境"><span class="nav-number">2.</span> <span class="nav-text">部署hadoop运行环境</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#工具及系统介绍"><span class="nav-number">2.1.</span> <span class="nav-text">工具及系统介绍</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Virtualbox"><span class="nav-number">2.1.1.</span> <span class="nav-text">Virtualbox</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Centos"><span class="nav-number">2.1.2.</span> <span class="nav-text">Centos</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#WinSCP"><span class="nav-number">2.1.3.</span> <span class="nav-text">WinSCP</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Putty"><span class="nav-number">2.1.4.</span> <span class="nav-text">Putty</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#部署hadoop流程介绍"><span class="nav-number">2.2.</span> <span class="nav-text">部署hadoop流程介绍</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#安装virtualbox虚拟机"><span class="nav-number">2.2.1.</span> <span class="nav-text">安装virtualbox虚拟机</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#安装centos系统"><span class="nav-number">2.2.2.</span> <span class="nav-text">安装centos系统</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#安装jdk"><span class="nav-number">2.2.3.</span> <span class="nav-text">安装jdk</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#复制虚拟机，并实现ssh无密码登陆"><span class="nav-number">2.2.4.</span> <span class="nav-text">复制虚拟机，并实现ssh无密码登陆</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#参考文献"><span class="nav-number">3.</span> <span class="nav-text">参考文献</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#angularjs"><span class="nav-number">1.</span> <span class="nav-text">angularjs</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#过滤器"><span class="nav-number">1.1.</span> <span class="nav-text">过滤器</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#*_json_将对象转成json"><span class="nav-number">2.</span> <span class="nav-text">  * json 将对象转成json</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#列表查询（18）"><span class="nav-number">2.1.</span> <span class="nav-text">列表查询（18）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#列表排序（19）"><span class="nav-number">2.2.</span> <span class="nav-text">列表排序（19）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#自定义过滤器"><span class="nav-number">2.3.</span> <span class="nav-text">自定义过滤器</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#控制器"><span class="nav-number">2.4.</span> <span class="nav-text">控制器</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#-正确使用方法"><span class="nav-number">3.</span> <span class="nav-text">-正确使用方法</span></a></li></ol></div>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator"></div>
